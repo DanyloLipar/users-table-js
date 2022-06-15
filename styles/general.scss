@@ -1,0 +1,89 @@
+.general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &__adder {
+        border: 3px solid $table-border;
+        margin-bottom: 20px;
+        background: $table-bkcg;
+
+        &-btn {
+            background-color: $general-color;
+            border: 3px solid $table-border;
+            margin: 7px;
+            padding: 5px;
+            font-size: 17px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.7s;
+
+            &:hover {
+                background-color: $white-color;
+            }
+        }
+    }
+}
+
+.content {
+    margin-top: 25px;
+
+    &__table {
+        border: 5px solid $table-border;
+        border-spacing: 10px;
+        background-color: $table-bkcg;
+    }
+}
+
+.remover {
+    &__button {
+        background-color: $white-color;
+        border: 2px solid $remover-border;
+        cursor: pointer;
+    }
+}
+
+.description {
+    box-sizing: border-box;
+
+    &>td {
+        border: 3px solid $general-color;
+        border-radius: 5px;
+        padding: 10px 8px;
+        background-color: $box-bckg;
+    }
+
+    &>td:first-child {
+        border: 3px solid $name-color;
+        font-style: italic;
+        background-color: $white-color;
+        cursor: pointer;
+    }
+
+    &>td:last-child {
+        background-color: $remove-btn-bckg;
+        border-color: $remover-border;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &>th {
+        padding: 10px 5px;
+        cursor: pointer;
+    }
+
+    &__name {
+        text-align: start;
+        transition: color 0.4s;
+
+        &:hover {
+            color: $general-color;
+            -webkit-text-stroke: 0.5px black;
+        }
+    }
+}
