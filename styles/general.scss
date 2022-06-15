@@ -1,10 +1,17 @@
+@import './vars.scss';
+@import './mixins.scss';
+
 .general {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include onMobileorTablet {
+        font-size: 9px;
+    }
 
     &__adder {
         border: 3px solid $table-border;
@@ -35,25 +42,58 @@
         border: 5px solid $table-border;
         border-spacing: 10px;
         background-color: $table-bkcg;
+        table-layout: auto;
+        margin: 0 auto;
+
+        @include onMobileorTablet {
+            border-spacing: 3px;
+            border: 2px solid $table-border;
+        }
     }
 }
 
 .remover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
     &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $white-color;
         border: 2px solid $remover-border;
         cursor: pointer;
+
+        @include onMobileorTablet {
+            font-size: 7px;
+            height: 15px;
+        }
+    }
+
+    @include onMobileorTablet {
+        width: 23px;
     }
 }
 
 .description {
     box-sizing: border-box;
 
+    @include onMobileorTablet {
+        max-width: 370px;
+    }
+
     &>td {
         border: 3px solid $general-color;
         border-radius: 5px;
         padding: 10px 8px;
         background-color: $box-bckg;
+
+        @include onMobileorTablet {
+            padding: 4px 2px;
+            border: 1px solid $general-color;
+        }
     }
 
     &>td:first-child {
@@ -61,6 +101,10 @@
         font-style: italic;
         background-color: $white-color;
         cursor: pointer;
+
+        @include onMobileorTablet {
+            border: 1px solid $name-color;
+        }
     }
 
     &>td:last-child {
@@ -75,6 +119,10 @@
     &>th {
         padding: 10px 5px;
         cursor: pointer;
+
+        @include onMobileorTablet {
+            padding: 5px 2px;
+        }
     }
 
     &__name {
@@ -85,5 +133,17 @@
             color: $general-color;
             -webkit-text-stroke: 0.5px black;
         }
+    }
+
+    &__website {
+        @include onMobileorTablet {
+            display: none;
+        }
+    }
+}
+
+#website {
+    @include onMobileorTablet {
+        display: none;
     }
 }

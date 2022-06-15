@@ -14,9 +14,9 @@ export function updater(users, father) {
       <td class="description__modal sort-name" userid=${user.id}>${user.name}</td>
       <td>${user.username}</td>
       <td>${user.email}</td>
-      <td>${user.website}</td>
+      <td class="description__website">${user.website}</td>
       <td class="remover">
-        <button getid="${user.id}" class="remover__button">Remove</button>
+        <button getid="${user.id}" class="remover__button">🗙</button>
       </td>
     `
 
