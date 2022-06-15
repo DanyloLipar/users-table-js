@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Users table</title>
+    <script type="module" crossorigin src="/assets/index.a3dc915a.js"></script>
+    <link rel="stylesheet" href="/assets/index.41f12b27.css">
+  </head>
+  <body>
+    <!-- Modal One -->
+    <div id="addModal" class="modal">
+      <form id="userForm" class="modal__window">
+        <div class="modal__window-obj obj">
+          <section class="obj__things">
+            <div class="obj__things-write">
+              <label>
+                Name:
+                <input 
+                  id="addName"
+                  required
+                  />
+              </label>
+            </div>
+            <div class="obj__things-write">
+              <label>
+                Username:
+                <input 
+                  id="addUserName"
+                  required
+                  />
+              </label>
+            </div>
+            <div class="obj__things-write">
+              <label>
+                Email:
+                <input 
+                  type="email" 
+                  id="addEmail"
+                  required
+                />
+              </label>
+            </div>
+            <div class="obj__things-write">
+              <label>
+                Website:
+                <input 
+                  id="addWebsite"
+                  required
+                  />
+              </label>
+            </div>
+          </section>
+          <span
+            id="closer"
+            class="obj__close"
+          >
+            &times;
+          </span>
+        </div>
+        <div class="modal__content-additional additional">
+          <h4>Additional information</h4>
+          <div class="additional__inp">
+            <label>
+              Location(city/town):
+              <input 
+                id="addCity"
+                required
+                />
+            </label>
+            <label>
+              Street:
+              <input 
+                id="addStreet"
+                required
+                />
+            </label>
+            <label>
+              Zip code:
+              <input 
+                id="addZip"
+                required
+                />
+            </label>
+          </div>
+        </div>
+        <button 
+          class="modal__window-adding"
+          type="submit"
+        >Add</button>
+      </form>
+    </div>
+    <!-- Modal two -->
+    <div id="more" class="details">
+      <section class="details__window">
+        <div class="details__window-items">
+          <span class="closer-2">X</span>
+        </div>
+      </section>
+    </div>
+
+    <header class="heading">
+      <div class="heading__box"></div>
+    </header>
+    <main class="general">
+      <div class="general__adder">
+        <button
+          id="adder" 
+          class="general__adder-btn">
+          Add user
+        </button>
+      </div>
+      <h2 class="general__title">Available users</h2>
+      <div class="general__content content">
+        <table id="table" class="content__table">
+          <thead>
+            <tr class="content__table-description description">
+              <th id="name" class="description__name">Name ↑↓</th>
+              <th id="username" class="description__name">Username ↑↓</th>
+              <th id="email" class="description__name">Email ↑↓</th>
+              <th id="website" class="description__name">Website ↑↓</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </main>
+    
+    
+    
+    
+    
+  </body>
+</html>
