@@ -1,4 +1,4 @@
-import { updater, table } from "./helper";
+import { updater, table } from "./helper.js";
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
 
